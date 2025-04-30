@@ -17,3 +17,8 @@ def home(request):
         count =customer.objects.all().count()
         print(f"{count} customers ")
     return render(request, 'home.html')
+
+
+def show(request):
+    data = customer.objects.all()
+    return render(request, 'show.html' ,{'data':data})
